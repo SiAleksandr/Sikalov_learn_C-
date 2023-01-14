@@ -13,9 +13,7 @@ int max = first;
 if ( second > first ) {
     max = second;
 }
-else {
-    if ( third > first ) {
-        max = third;
-    }
-}
-System.Console.Write($"Наибольшее число это: {max}"};
+if ( third > max ) {
+    max = third;
+}    
+System.Console.Write($"Наибольшее число это: {max}");
