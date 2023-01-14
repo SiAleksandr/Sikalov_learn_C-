@@ -11,8 +11,8 @@ if ( number1 > number2 ) {
     System.Console.WriteLine($"Большее = {number1}; Меньшее = {number2}"); 
 }
 else {
-    if ( numder1 == number2 ) {
-        System.Console.WriteLine($"Эти числа равны {number1} = {number2}";
+    if ( number1 == number2 ) {
+        System.Console.WriteLine($"Эти числа равны {number1} = {number2}");
     }
     else {
         System.Console.WriteLine($"Большее = {number2}; Меньшее = {number1}");
