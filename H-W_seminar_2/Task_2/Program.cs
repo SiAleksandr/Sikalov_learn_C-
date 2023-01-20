@@ -5,21 +5,34 @@
 // 32679 -> 6
 System.Console.Write("Введте число, в котором надо найти третью цифру -> ");
 int givenNum = Convert.ToInt32(Console.ReadLine());
-if (givenNum < 99 && givenNum > -99 )
+int CountDigits(int k)
 {
-    System.Console.WriteLine("В этом числе нет третьей цифры.");
+    int count = 0;
+    while (k > 0)
+        {
+            k = k / 10;
+            count +=1;
+        }
+    return count;
+}
+if (givenNum > 99 || givenNum < -99)
+{
+    if (givenNum < 0)
+    {
+        givenNum = givenNum * (-1);
+    }
+    int howMany = CountDigits(givenNum);
+    howMany = howMany - 3;
+    int counter = 0; 
+    while (counter < howMany)
+    {
+        givenNum = givenNum/10;
+        counter += 1;
+    }
+    int answer = givenNum % 10;
+    System.Console.Write($"Третья цифра числа это {answer}");
 }
 else
 {
-    int FindDigit3(int N)
-    {
-        int dig3 = ((N / 10) / 10) % 10;
-        if (dig3 < 0)
-        {
-            dig3 = dig3 * (-1);
-        }
-        return dig3;
-    }
-    int thirdDigit = FindDigit3(givenNum);
-    System.Console.Write($"Третья цифра числа это {thirdDigit}");
+    System.Console.WriteLine("В этом числе нет третьей цифры.");
 }
