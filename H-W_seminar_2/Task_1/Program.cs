@@ -18,3 +18,5 @@ if (givenNum > 99 && givenNum < 1000)
 }
 else
 {
+    System.Console.WriteLine("Это число не подходит");
+}
