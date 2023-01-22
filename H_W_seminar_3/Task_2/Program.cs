@@ -60,7 +60,7 @@ double LenghtAB(int startXa, int startYa, int startZa, int startXb, int startYb,
     int modYb = Modulo(startYb);
     int modZb = Modulo(startZb);
     int max = FindMax(modXa, modYa, modZa, modXb, modYb, modZb);
-    int newXa = max + startXa;
+    int newXa = max + startXa;   
     int newYa = max + startYa;
     int newZa = max + startZa;
     int nweXb = max + startXb;
@@ -71,6 +71,7 @@ double LenghtAB(int startXa, int startYa, int startZa, int startXb, int startYb,
     int diffXaXb = newXa - nweXb;
     diffXaXb = Modulo(diffXaXb);
     int diffZaZb = newZa - newZb;
+    diffZaZb = Modulo(diffZaZb);
     double gipotenuzaOxOz = Math.Sqrt((diffXaXb * diffXaXb) + (diffZaZb * diffZaZb));
     double ab = Math.Sqrt((gipotenuzaOxOz * gipotenuzaOxOz) + (diffYaYb * diffXaXb));
     return ab;
